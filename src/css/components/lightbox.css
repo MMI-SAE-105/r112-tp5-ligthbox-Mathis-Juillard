@@ -16,3 +16,30 @@
 #lightbox.show {
     opacity: 1;
 }
+
+#lightbox  {
+  transition: display 1s allow-discrete, overlay 1s allow-discrete;
+
+  animation: close 1s forwards;
+  &[open] {
+    animation: open 1s forwards;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
