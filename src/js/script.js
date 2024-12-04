@@ -1,11 +1,10 @@
 // *** LIGHTBOX ***
 const lightbox = document.querySelector("#lightbox");
+const images = document.querySelectorAll("[data-full-img]");
 
 lightbox.addEventListener("click", function() {
   lightbox.close();
 }); 
-
-const images = document.querySelectorAll("img");   
 
 images.forEach(image=> {
     image.addEventListener("click", function() {
